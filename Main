@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.util.Random;
+class Main {
+public static void main(String[] args) {
+
+Scanner sc = new Scanner(System.in);
+Random random = new Random();
+boolean continua = true;
+  
+while (continua){
+int numeroaleatorio = random.nextInt(6);  
+
+System.out.println("TENTE ADIVINHAR O NÚMERO QUE A MÁQUINA VAI ESCOLHER ENTRE 0 E 5");
+  
+System.out.println("");
+  
+System.out.println("DIGITE O NÚMERO QUE VOCÊ ACHA QUE FOI ESCOLHIDO: ");
+int j1 = sc.nextInt();
+
+if(j1 >= 6){
+System.out.println(">> ERRO O NÚMERO É INVÁLIDO <<");
+}
+else if((numeroaleatorio == j1) && (j1 == numeroaleatorio)){ 
+System.out.println("PARABÉNS VOCÊ ACERTOU :) ");
+}
+else if((numeroaleatorio > j1) || (numeroaleatorio < j1)){
+System.out.println("VOCÊ ERROU :( ");
+}
+  
+System.out.println("O NÚMERO QUE A MÁQUINA ESCOLHEU FOI: " + numeroaleatorio);
+  
+System.out.println();
+System.out.println("Deseja Continuar Jogando ? \n1-SIM\n2-Não");
+String opcao = sc.next();
+if(opcao.equalsIgnoreCase("2")) continua = false;
+  
+}
+}
+}
